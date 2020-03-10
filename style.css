@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+html{
+  scroll-behavior: smooth;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  max-width: 1140px;
+
+  margin: auto;
+}
+
+.sidebar1{
+  right: 0px;
+  top: 100px;
+}
+
+/*Header Section*/
+header {
+  background: rgba(241, 240, 240, 0.6);
+  backdrop-filter: blur(3px);  
+  position: fixed;
+  
+  top: 0;
+  left: 0px;
+  right: 0px;
+  padding: 0px 15px;
+ 
+  border-bottom: 1px solid #000000;
+  z-index: 10;
+  transition: 0.4s;
+ 
+}
+
+
+header .row {
+  justify-content: space-between;
+  align-items: center;
+}
+header .brand-name a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  color:white;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+
+ 
+}
+
+
+header .brand-name a::before {
+  content: "";
+  height: 2px;
+  background-color: black;
+  width: 18%;
+  position: absolute;
+  left: 6%;
+  top: 92%;
+}
+
+header .navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .navbar ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+header .navbar a{
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 72px;
+  color: black;
+  font-weight: bolder;
+  display: inline-block;
+  position: relative;
+}
+
+header .navbar ul li.active a::before {
+  content: "";
+  height: 3px;
+  background-color: black;
+  width:100%;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  transition: all 0.5s ease;
+}
+header .navbar ul li a:hover::before {
+  width: 0%;
+  left: 0;
+}
+
+
+/*Home Section*/
+.home {
+  max-width: 100%;
+  
+  background-image: url(resim/123.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.home .full-screen {
+  min-height: 100vh;
+}
+
+.home .home-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 25px;
+}
+.home .home-content .block {
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding-left: 30px;
+  border-left: 5px solid black;
+  margin-top: 25px;
+}
+.home .home-content .block h6 {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+.home .home-content .block h1 {
+  color: black;
+  font-size: 60px;
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+}
+.home .home-content .block h3 {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+
+.home-content .block .cv-btn a {
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  padding: 12px 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+
+.home-content .block .cv-btn a:hover {
+  background-color: black;
+  color: white;
+}
+/*About Me*/
+
+.about-me {
+  
+  
+  background-image: url(resim/nick-nice-gPm8h3DS1s4-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+  max-width: 100%;
+  
+  
+  
+}
+
+
+
+.about-me .section-title h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 600;
+  margin:0 0 10px;
+  position: relative;
+  color: #ffffff;
+  
+  
+  
+}
+.about-me .section-title h1::before {
+  content: "";
+  left: 0;
+  height: 2px;
+  bottom: 0px;
+  right: 40%;
+  position: absolute;
+  background-color: #febd01;
+}
+
+.upper-case {
+  text-transform: uppercase !important;
+}
+.about-me .section-title p.small {
+  font-size: 14px;
+  display: block;
+  color: #e2e2e2;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.about-me .about-content {
+  background-color: rgba(195, 184, 182, 0.8);
+  
+
+ 
+  
+}
+
+.about-me .about-content .img {
+  flex: 0 0 33.33%;
+  min-width: 33.33%;
+  border-right: 2px dashed black;
+  padding-left: 5px;
+  
+
+  
+  
+}
+.about-me .about-content .img img {
+  width: 99%;
+  display: block;
+  
+  margin-top: 2%;
+  border-radius: 50%;
+
+}
+.about-me .about-content .text {
+  max-height: 3%;
+  align-items: center;
+  
+  flex: 0 0 66.66%;
+  max-width: 66.66%;
+  padding-left: 30px;
+  padding-top: 50px;
+  
+  
+}
+
+.about-me .about-content .text h4 {
+  font-size: 200%;
+  font-weight: 600;
+  margin: 0 0 1%;
+  color: black;
+}
+
+.about-me .about-content .text h6 {
+  font-size: 130%;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: black;
+}
+
+.about-me .about-content .text h6 span {
+  color: #febd01;
+}
+.about-me .about-content .text p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #000000;
+}
+
+.about-me .about-content .text .info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-me .about-content .text .info .list {
+  flex: 0 0 50%;
+  max-width: 50%;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.about-me .about-content .text .info .list label {
+  font-size: 15px;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+.about-me .about-content .text .info .list p {
+  border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+  max-width: 80%;
+}
+.about-me .about-content .text .social-links {
+  padding-top: 25px;
+  
+}
+.about-me .about-content .text .social-links a {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #000000;
+  line-height: 28px;
+  text-align: center;
+  margin: 0 1px;
+  
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.about-me .about-content .text .social-links a:hover {
+  background-color:transparent;
+}
+
+.about-me .about-content .text .social-links i {
+  padding-top: 35%;
+}
+.about-me .about-content .text .social-links a .fa {
+  color: #ffffff;
+  font-size: 12px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.about-me .about-content .text .social-links a .fa:hover{
+    color:black;
+}
+.about-me .button{
+  display: block;
+  text-align: center;
+  padding-right: 70px;
+  padding-top: 50px;
+
+}
+/* The side navigation menu */
+.sidenav {
+  height: 0; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  bottom: 0; /* Stay at the top */
+  left: 0;
+  background-color:rgb(255, 255, 255,0.8); /* Black*/
+  backdrop-filter: blur(3px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+   /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*Skills Section */
+
+
+.skills{
+  padding: 100px 15px;
+  background-color: #f5f8fd;
+  max-height: 100%;
+  
+
+}
+
+
+.align-items-center{
+align-items: center;
+}
+.skills .skills-content{
+  
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 40px;
+  
+  
+}
+
+.skills .img{
+  
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 30px;
+ 
+}
+.skills .img img{
+  width: 100%;
+  display: block;
+}
+.skills .section-title h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0 10px;
+  position: relative;
+  color: #000000;
+  padding-bottom: 0px;
+}
+.skills .section-title h1::before {
+  content: "";
+  left: 0;
+  height: 2px;
+  bottom: 0px;
+  right: 40%;
+  position: absolute;
+  background-color: #febd01;
+}
+
+.skills .skills-content .section-title p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color:#838383;
+  margin: 15px 0 20px;
+}
+
+.skills .skills-content .skill-box{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.skills .skills-content .skill-box h6{
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  margin:0 0 15px;
+}
+.skills .skills-content .skill-box .skill-bar {
+  height:10px;
+  background-color: #eeeeee;
+  position: relative;
+}
+
+.skills .skills-content .skill-box .skill-bar .skill-bar-in{
+  background-color: #febd01;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+
+}
+.skills .skills-content .skill-box .skill-bar .skill-bar-in span{
+  color: #838383;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  top:-20px;
+  
+}
+
+
+/*Blogs*/
+.blogs{
+  padding: 100px 15px;
+  background-color: f5f8fd;
+  
+  
+}
+.center-title{
+  text-align: center;
+}
+.blogs .section-title h1{
+  font-size: 35px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0 10px;
+  position: relative;
+  color: #000000;
+  padding-bottom: 0px;
+}
+.blogs .section-title h1:before{
+  content: "";
+  right: 30%;
+  left: 30px;
+  height: 2px;
+  bottom: 0px;
+  
+  position: absolute;
+  background-color: #febd01;
+
+}
+
+
+.blogs .blogs-content{
+  padding-top: 35px;
+  flex:0 0 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: space-between;
+}
+
+.blogs .blogs-content .box{
+  
+  flex: 0 0 30%;
+  max-width: 30%;
+  
+}
+.blogs .blogs-content .box .info {
+  padding:10px 0;
+}
+
+.blogs .blogs-content .box .info span{
+  font-size: 12px;
+  columns: #838383; 
+}
+.blogs .blogs-content .box .info span:nth-child(2){
+  border-left: 1px solid #818181;
+  padding-left: 8px;
+  margin-left: 10px;
+}
+.blogs .blogs-content .box .info h3{
+font-size: 22px;
+font-weight: 600;
+color: #000000;
+margin:0 0 10px;
+padding: 0;
+} 
+.blogs .blogs-content .box .info p{
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+color: #838383;
+margin: 0;
+}
+.blogs .blogs-content .box  a{
+  font-size: 14px;
+  text-decoration: none;
+  color: #febd01;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 500;
+  border-bottom: 2px solid #febd01;
+  -webkit-transition:all .5s ease;
+  transition: all .5s ease;
+}
+
+.blogs .blogs-content .box  a:hover{
+  color: #000000;
+  border-color: #000000;
+}
+.blogs .blogs-content .box .img{
+  overflow: hidden;
+}
+ 
+  
+
+.blogs .blogs-content .box img{
+ 
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: all .5s ease;
+}
+.blogs .blogs-content .box img:hover{
+  transform: scale(1.1)
+}
+
+/*Contact */
+
+.contact-us{
+  padding: 100px 15px;
+  background-color: #f5f8fd;
+}
+.contact-us .section-title h1{
+  font-size: 35px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0 10px;
+  position: relative;
+  color: #000000;
+  padding-bottom: 0px;
+}
+.contact-us .section-title h1::before{
+  content: "";
+  right: 30%;
+  left: 30px;
+  height: 2px;
+  bottom: 0px;
+  
+  position: absolute;
+  background-color: #febd01;
+
+  left: 30%;
+}
+
+.contact-us .contact-form {
+  background-color: #ffffff;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 50px;
+  border: 1px solid #eeeeee;
+}
+
+
+.contact-us .contact-form .text {
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+.contact-us .contact-form .text h2{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.contact-us .contact-form .text p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #838383;
+  margin: 0px;
+}
+.contact-us .contact-form .space-between{
+  justify-content: space-between;
+}
+.contact-us .contact-form .col-6{
+  
+
+  flex:0 0 48%;
+  max-width:48%;
+}
+
+.contact-us .contact-form  .col-12{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.contact-us .contact-form .form-control{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.contact-us .contact-form textarea.form-control{
+  height: 120px;
+}
+.contact-us .contact-form .form-control::placeholder{
+  color: #838388;
+}
+.contact-us .contact-form .button{
+ 
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.contact-us .contact-form .button a{
+  border-radius: 4px;
+  color: black;
+  border: 1px solid black;
+  padding: 12px 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  background-color: #febd01;
+  box-shadow: 0px 10px 15px #e8e8e8;
+
+}
+
+.contact-us .contact-form .button a:hover{
+color: white;
+background-color:black;
+
+}
+.text-right{
+  text-align: right;
+}
+
+
+/*Footer*/
+footer{
+  padding: 50px 15px;
+  background-color: black;
+}
+
+footer .logo{
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+
+
+}
+
+footer .logo img{
+  
+  height: 100px;
+}
+
+footer .social{
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  
+}
+footer .social a{
+  color: #9999;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 12px;
+  transition: all .5s ease ;
+  
+}
+footer .social a:hover{
+  color: white;
+}
+
+
+/*copyright*/
+.copyright{
+  background-color: black;
+  border-top: 1px solid white;
+  padding: 15px;
+}
+.copyright p{
+  color: #838383;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+}
